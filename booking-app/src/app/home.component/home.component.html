@@ -1,1 +1,149 @@
-<p>home.component works!</p>
+<!-- <div class="home"> -->
+    <!-- HEADER SECTION -->
+    <!-- <header>
+      <img src="./images/aaa.jpg" alt="Hotel" />
+      <div class="overlay"></div>
+      <div class="overlay-content">
+        <h1>Welcome to <span class="color">Phegon Hotel</span></h1>
+        <h3>Step into a haven of comfort and care</h3>
+      </div>
+    </header> -->
+
+    <!-- Room Search Component -->
+    <!-- <app-roomsearch
+      (searchResults)="handleSearchResult($event)"
+    ></app-roomsearch> -->
+
+    <!-- Room Result Component -->
+
+    <!-- <app-roomresult [roomSearchResults]="searchResults"></app-roomresult>
+
+    <h4><a class="rooms" href="/rooms">All Rooms</a></h4> -->
+
+    <!-- Services Section -->
+    <!-- <h2>Services at <span class="color">Phegon Hotel</span></h2>
+
+    <section>
+      <div class="card">
+        <img src="./images/ac.png" alt="Air Conditioning" />
+        <div class="details">
+          <h3 class="title">Air Conditioning</h3>
+          <p class="description">
+            Stay cool and comfortable throughout your stay with our individually
+            controlled in-room air conditioning.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/mini-bar.png" alt="Mini Bar" />
+        <div class="details">
+          <h3 class="title">Mini Bar</h3>
+          <p class="description">
+            Enjoy a convenient selection of beverages and snacks stocked in your
+            room's mini bar with no additional cost.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/parking.png" alt="Parking" />
+        <div class="details">
+          <h3 class="title">Parking</h3>
+          <p class="description">
+            We offer on-site parking for your convenience. Please inquire about
+            valet parking options if available.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/wifi.png" alt="WiFi" />
+        <div class="details">
+          <h3 class="title">WiFi</h3>
+          <p class="description">
+            Stay connected throughout your stay with complimentary high-speed
+            Wi-Fi access available in all guest rooms and public areas.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+   -->
+
+<div class="home space-y-10">
+  <!-- HEADER SECTION -->
+  <header class="relative h-[70vh] overflow-hidden">
+    <img src="./images/main.jpg" alt="Hotel" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-opacity-5"></div>
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4 bg-black opacity-80">
+      <h1 class="text-4xl md:text-5xl font-bold">
+        Welcome to <span class="text-yellow-400">Royal Hotel</span>
+      </h1>
+      <h3 class="text-xl mt-4">Step into a haven of comfort and care</h3>
+    </div>
+  </header>
+
+  <!-- Room Search Component -->
+  <div class="max-w-5xl mx-auto px-4">
+    <app-roomsearch (searchResults)="handleSearchResult($event)"></app-roomsearch>
+  </div>
+
+  <!-- Room Result Component -->
+  <div class="max-w-5xl mx-auto px-4">
+    <app-roomresult [roomSearchResults]="searchResults"></app-roomresult>
+    <h4 class="mt-6 text-center">
+      <a href="/rooms" class="text-blue-600 hover:underline text-lg font-medium">All Rooms</a>
+    </h4>
+  </div>
+
+ <!-- Services Section -->
+<section class="w-full flex flex-col items-center py-12 px-4">
+  <!-- Centered Heading with Responsive Width -->
+  <div class="w-full max-w-screen-md text-center mb-10">
+    <h2 class="text-3xl md:text-4xl font-bold">
+      Services at <span class="text-yellow-500">Phegon Hotel</span>
+    </h2>
+  </div>
+
+  <!-- 2 by 2 Grid Layout -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-5xl">
+    <!-- Card 1 -->
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md h-[350px] flex flex-col items-center justify-between text-center">
+      <img src="./images/ac.png" alt="Air Conditioning" class="h-20" />
+      <h3 class="text-xl font-semibold">Air Conditioning</h3>
+      <p class="text-gray-600 dark:text-gray-300 text-sm">
+        Stay cool and comfortable throughout your stay with individually controlled in-room A/C.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md h-[350px] flex flex-col items-center justify-between text-center">
+      <img src="./images/mini-bar.png" alt="Mini Bar" class="h-20" />
+      <h3 class="text-xl font-semibold">Mini Bar</h3>
+      <p class="text-gray-600 dark:text-gray-300 text-sm">
+        Enjoy a convenient selection of beverages and snacks stocked in your room at no extra cost.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md h-[350px] flex flex-col items-center justify-between text-center">
+      <img src="./images/parking.png" alt="Parking" class="h-20" />
+      <h3 class="text-xl font-semibold">Parking</h3>
+      <p class="text-gray-600 dark:text-gray-300 text-sm">
+        On-site parking available for your convenience. Inquire for valet options.
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md h-[350px] flex flex-col items-center justify-between text-center">
+      <img src="./images/wifi.png" alt="WiFi" class="h-20" />
+      <h3 class="text-xl font-semibold">WiFi</h3>
+      <p class="text-gray-600 dark:text-gray-300 text-sm">
+        Stay connected with complimentary high-speed Wi-Fi in all rooms and public areas.
+      </p>
+    </div>
+  </div>
+</section>
+
+</div>
