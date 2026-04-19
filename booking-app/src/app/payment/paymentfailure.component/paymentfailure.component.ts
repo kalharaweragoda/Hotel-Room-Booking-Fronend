@@ -1,9 +1,20 @@
 import { Component } from '@angular/core';
 
+import { RouterLink, ActivatedRoute } from '@angular/router';
 @Component({
-  selector: 'app-paymentfailure.component',
-  imports: [],
+  selector: 'app-paymentfailure',
+  imports: [RouterLink],
   templateUrl: './paymentfailure.component.html',
-  styleUrl: './paymentfailure.component.css',
+  styleUrl: './paymentfailure.component.css'
 })
-export class PaymentfailureComponent {}
+export class PaymentfailureComponent {
+
+
+  bookingReference: string = '';
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.bookingReference = this.route.snapshot.paramMap.get('bookingReference') || '';
+  }
+}
