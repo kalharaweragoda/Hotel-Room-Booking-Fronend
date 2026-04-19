@@ -1,0 +1,22 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { PaymentpageComponent } from './paymentpage.component';
+
+describe('PaymentpageComponent', () => {
+  let component: PaymentpageComponent;
+  let fixture: ComponentFixture<PaymentpageComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [PaymentpageComponent],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(PaymentpageComponent);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
