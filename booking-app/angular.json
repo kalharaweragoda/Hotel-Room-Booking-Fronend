@@ -16,8 +16,13 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/booking-app",
+            "index": "src/index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
+            "polyfills": [
+              "zone.js"
+            ],
             "assets": [
               {
                 "glob": "**/*",
@@ -26,7 +31,8 @@
             ],
             "styles": [
               "src/styles.css"
-            ]
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -36,7 +42,6 @@
                   "maximumWarning": "500kB",
                   "maximumError": "1MB"
                 },
-                
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "4kB",
@@ -66,7 +71,24 @@
           "defaultConfiguration": "development"
         },
         "test": {
-          "builder": "@angular/build:unit-test"
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
         }
       }
     }
