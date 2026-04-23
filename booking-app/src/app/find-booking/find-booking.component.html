@@ -3,9 +3,9 @@
     <div *ngIf="error" class="error">
       <p>{{ error }}</p>
     </div>
-
+  
     <h2>Find Booking</h2>
-
+  
     <!-- Search Section -->
     <div>
       <input
@@ -16,7 +16,7 @@
       />
       <button (click)="handleSearch()">Find</button>
     </div>
-
+  
     <!-- Booking Details -->
     <div *ngIf="bookingDetails" class="details">
       <h3>Booking Details</h3>
@@ -26,7 +26,7 @@
       <p><strong>Payment Status:</strong> {{ bookingDetails.paymentStatus }}</p>
       <p><strong>Amount:</strong> {{ bookingDetails.totalPrice }}</p>
       <p><strong>Booking Status:</strong> {{ bookingDetails.bookingStatus }}</p>
-
+  
       <hr />
       <h3>Booker Details</h3>
       <div>
@@ -37,7 +37,7 @@
           <strong>Phone Number:</strong> {{ bookingDetails.user.phoneNumber }}
         </p>
       </div>
-
+  
       <hr />
       <h3>Room Details</h3>
       <div>
@@ -48,3 +48,4 @@
       </div>
     </div>
   </div>
+  

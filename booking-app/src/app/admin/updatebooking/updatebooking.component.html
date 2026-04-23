@@ -1,10 +1,10 @@
 <div class="container">
     <h2>Update Booking</h2>
-
+  
     <!-- Display success or error messages -->
      <p *ngIf="message" class="success">{{message}}</p>
      <p *ngIf="error" class="error">{{error}}</p>
-
+  
     <!-- Display booking details if fetched -->
     <div *ngIf="!isLoading">
       <div class="details">
@@ -15,7 +15,7 @@
         <p><strong>Total Price:</strong> {{ bookingDetails.totalPrice }}</p>
         <p><strong>Payment Status:</strong> {{ bookingDetails.paymentStatus }}</p>
         <p><strong>Booking Status:</strong> {{ bookingDetails.bookingStatus }}</p>
-
+  
         <br />
         <hr />
         <br />
@@ -24,7 +24,7 @@
         <p><strong>Last Name:</strong> {{ bookingDetails.user.lastName }}</p>
         <p><strong>Email:</strong> {{ bookingDetails.user.email }}</p>
         <p><strong>Phone Number:</strong> {{ bookingDetails.user.phoneNumber }}</p>
-
+  
         <br />
         <hr />
         <br />
@@ -35,9 +35,9 @@
         <p><strong>Description:</strong> {{ bookingDetails.room.description }}</p>
         <img [src]="bookingDetails.room.imageUrl" alt="Room Image" height="200" />
       </div>
-
+  
       <hr />
-
+      
       <!-- Booking Status Update Form -->
       <h3>Update Status</h3>
       <div class="form-group">
@@ -50,7 +50,7 @@
           <option value="CHECKED_OUT">CHECKED OUT</option>
         </select>
       </div>
-
+  
       <div class="form-group">
         <label for="paymentStatus">Payment Status</label>
         <select id="paymentStatus" name="paymentStatus" [(ngModel)]="formState.paymentStatus" (change)="handleChange($event)">
@@ -62,11 +62,11 @@
           <option value="REVERSED">REVERSED</option>
         </select>
       </div>
-
+  
       <!-- Update Button -->
       <button (click)="handleUpdate()">Update Booking</button>
     </div>
-
+  
     <!-- Loading state -->
     <div *ngIf="isLoading">
       <p>Loading booking details...</p>

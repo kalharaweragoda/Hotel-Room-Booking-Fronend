@@ -8,12 +8,13 @@ describe('FindBookingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FindBookingComponent],
-    }).compileComponents();
+      imports: [FindBookingComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(FindBookingComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -7,13 +7,13 @@
         [attr.key]="room.id"
       >
         <img [src]="room.imageUrl" [alt]="room.roomNumber" />
-
+  
         <div class="details">
           <h3>{{ room.type }}</h3>
           <p>Price: ${{ room.pricePerNight }}/Night</p>
           <p>Description: {{ room.description }}</p>
         </div>
-
+  
         <div class="book-now">
           <!-- Conditionally render button based on admin status -->
           <button *ngIf="isAdmin" (click)="navigateToEditRoom(room.id)">

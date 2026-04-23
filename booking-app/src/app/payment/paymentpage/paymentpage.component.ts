@@ -36,7 +36,7 @@ export class PaymentpageComponent {
   ) {}
 
   async ngOnInit() {
-
+    
     this.bookingReference =
       this.route.snapshot.paramMap.get('bookingReference');
     this.amount = parseFloat(this.route.snapshot.paramMap.get('amount') || '0');
@@ -106,7 +106,7 @@ export class PaymentpageComponent {
     );
 
     if(paymentIntent && paymentIntent.status === 'succeeded'){
-
+      
       this.processing = false;
       console.log("Payment intend id is: " + paymentIntent.id);
       this.handleUpdateBookingPayment('succeeded', paymentIntent.id); // update the boking status in the backend and send email to the user of the status

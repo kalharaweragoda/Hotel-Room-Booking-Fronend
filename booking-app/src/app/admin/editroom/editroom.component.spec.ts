@@ -8,12 +8,13 @@ describe('EditroomComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EditroomComponent],
-    }).compileComponents();
+      imports: [EditroomComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(EditroomComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

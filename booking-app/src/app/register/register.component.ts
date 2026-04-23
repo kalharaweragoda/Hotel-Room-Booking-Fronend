@@ -13,7 +13,7 @@ import { ApiService } from '../service/api.service';
 export class RegisterComponent {
 
   constructor( private apiService: ApiService, private router: Router){}
-
+  
   formData: any = {
 
     firstName: '',
@@ -31,7 +31,7 @@ export class RegisterComponent {
       !this.formData.firstName ||
       !this.formData.lastName ||
       !this.formData.phoneNumber ||
-      !this.formData.password
+      !this.formData.password 
     ) {
       this.showError('Please all fields are required');
       return

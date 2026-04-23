@@ -23,3 +23,4 @@ export class PaginationComponent {
     this.paginate.emit(pageNumber);
   }
 }
+

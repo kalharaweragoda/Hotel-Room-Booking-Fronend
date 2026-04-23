@@ -8,12 +8,13 @@ describe('PaymentpageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PaymentpageComponent],
-    }).compileComponents();
+      imports: [PaymentpageComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(PaymentpageComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

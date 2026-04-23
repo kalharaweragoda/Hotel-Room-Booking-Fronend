@@ -8,12 +8,13 @@ describe('UpdatebookingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UpdatebookingComponent],
-    }).compileComponents();
+      imports: [UpdatebookingComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(UpdatebookingComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

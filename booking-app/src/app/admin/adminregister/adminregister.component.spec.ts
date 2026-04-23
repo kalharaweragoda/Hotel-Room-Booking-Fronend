@@ -8,12 +8,13 @@ describe('AdminregisterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AdminregisterComponent],
-    }).compileComponents();
+      imports: [AdminregisterComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(AdminregisterComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

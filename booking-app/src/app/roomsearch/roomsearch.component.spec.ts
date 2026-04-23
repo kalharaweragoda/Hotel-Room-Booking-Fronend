@@ -8,12 +8,13 @@ describe('RoomsearchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RoomsearchComponent],
-    }).compileComponents();
+      imports: [RoomsearchComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(RoomsearchComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

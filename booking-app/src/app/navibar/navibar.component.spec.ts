@@ -8,12 +8,13 @@ describe('NavibarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavibarComponent],
-    }).compileComponents();
+      imports: [NavibarComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(NavibarComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

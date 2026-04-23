@@ -9,7 +9,7 @@ import { RoomsearchComponent } from '../roomsearch/roomsearch.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  
   searchResults: any[] = [] // store the result of the searched room
 
   // handle the result comming from the roomseearch component

@@ -36,7 +36,7 @@ export class UpdatebookingComponent {
   ngOnInit(): void {
     // Get the booking code from the URL parameter
     this.bookingCode = this.activatedRoute.snapshot.paramMap.get('bookingCode') || '';
-
+    
     // Fetch booking details using the API service
     this.fetchBookingDetails();
   }

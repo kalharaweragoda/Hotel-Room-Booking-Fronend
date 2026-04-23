@@ -8,12 +8,13 @@ describe('AddroomComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AddroomComponent],
-    }).compileComponents();
+      imports: [AddroomComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(AddroomComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -30,10 +30,10 @@ export class RoomdetailsComponent {
 
   //minimum date for the check-in-date
   minDate: string = new Date().toISOString().split('T')[0] //get the current date in this format "yyy-mm-dd"
-
+  
   ngOnInit():void{
     this.roomId = this.route.snapshot.paramMap.get('id');
-
+    
     if (this.roomId) {
       this.fetchRoomDetails(this.roomId)
     }
@@ -113,7 +113,7 @@ export class RoomdetailsComponent {
             this.message = null;
             this.router.navigate(['/rooms'])
           }, 8000)
-
+          
         }
       },
       error:(err) =>{

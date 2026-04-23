@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class ManagebookingsComponent {
 
-
+  
   bookings: any[] = []; // Store all bookings
   filteredBookings: any[] = []; // Store filtered bookings based on search term
   searchTerm: string = ''; // Search term for filtering bookings

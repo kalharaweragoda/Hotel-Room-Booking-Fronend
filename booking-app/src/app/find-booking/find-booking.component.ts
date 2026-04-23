@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class FindBookingComponent {
 
   constructor(private apiService: ApiService){}
-
+  
   confirmationCode: string = '';
   bookingDetails: any = null;
   error: any = null;
@@ -40,5 +40,4 @@ export class FindBookingComponent {
       this.error = ''
     }, 4000)
   }
-  
 }

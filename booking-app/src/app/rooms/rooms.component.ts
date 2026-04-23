@@ -26,7 +26,7 @@ export class RoomsComponent {
   error: any = null;
 
   constructor(private apiService: ApiService) {}
-
+  
   ngOnInit():void{
 
     this.fetchRooms();
@@ -74,7 +74,7 @@ export class RoomsComponent {
       this.rooms = results;
       this.filteredRooms = results;
     }
-
+  
     // Handle changes to room type filter
     handleRoomTypeChange(event: any) {
       const selectedType = event.target.value;

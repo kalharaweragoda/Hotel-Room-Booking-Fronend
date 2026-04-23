@@ -8,12 +8,13 @@ describe('EditprofileComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EditprofileComponent],
-    }).compileComponents();
+      imports: [EditprofileComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(EditprofileComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

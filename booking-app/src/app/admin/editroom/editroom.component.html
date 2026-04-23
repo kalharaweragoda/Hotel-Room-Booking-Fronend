@@ -1,10 +1,10 @@
 <div class="container">
     <h2>Edit Room</h2>
-
+  
     <!-- Display Error and Success Messages -->
     <div *ngIf="error" class="error">{{ error }}</div>
     <div *ngIf="success" class="success">{{ success }}</div>
-
+  
     <!-- Room Details Form -->
     <div class="room-form">
       <!-- Room Image Upload -->
@@ -17,7 +17,7 @@
         </div>
         <input type="file" name="file" (change)="handleFileChange($event)" />
       </div>
-
+  
       <!-- Room Type -->
       <div class="form-group">
         <label>Room Type</label>
@@ -26,7 +26,7 @@
           <option *ngFor="let type of roomTypes" [value]="type">{{ type }}</option>
         </select>
       </div>
-
+  
       <!-- Room Price -->
       <div class="form-group">
         <label>Room Price</label>
@@ -37,7 +37,7 @@
           (input)="handleChange($event)"
         />
       </div>
-
+  
       <!-- Room Number -->
       <div class="form-group">
         <label>Room Number</label>
@@ -48,7 +48,7 @@
           (input)="handleChange($event)"
         />
       </div>
-
+  
       <!-- Room Capacity -->
       <div class="form-group">
         <label>Room Capacity</label>
@@ -59,7 +59,7 @@
           (input)="handleChange($event)"
         />
       </div>
-
+  
       <!-- Room Description -->
       <div class="form-group">
         <label>Room Description</label>
@@ -69,7 +69,7 @@
           (input)="handleChange($event)"
         ></textarea>
       </div>
-
+  
       <!-- Submit Buttons -->
       <div class="form-actions">
         <button (click)="handleUpdate()">Update Room</button>

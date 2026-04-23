@@ -1,7 +1,7 @@
 <div class="container">
     <div *ngIf="error" class="error">{{ error }}</div>
       <h2>All Bookings</h2>
-
+    
       <!-- Search bar to filter bookings -->
       <div class="search">
         <label>Filter by Booking Number:</label>
@@ -12,7 +12,7 @@
           placeholder="Enter booking number"
         />
       </div>
-
+    
       <!-- Display bookings for the current page -->
       <div class="results">
         <div *ngFor="let booking of currentBookings" class="result-item">
@@ -27,7 +27,7 @@
           </button>
         </div>
       </div>
-
+    
       <!-- Pagination Component -->
       <app-pagination
         [roomPerPage]="bookingsPerPage"
@@ -36,3 +36,4 @@
         (paginate)="onPageChange($event)"
       ></app-pagination>
     </div>
+    

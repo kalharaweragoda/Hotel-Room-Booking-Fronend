@@ -8,12 +8,13 @@ describe('RoomresultComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RoomresultComponent],
-    }).compileComponents();
+      imports: [RoomresultComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(RoomresultComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

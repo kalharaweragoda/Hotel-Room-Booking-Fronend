@@ -8,12 +8,13 @@ describe('PaymentfailureComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PaymentfailureComponent],
-    }).compileComponents();
+      imports: [PaymentfailureComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(PaymentfailureComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {
