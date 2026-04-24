@@ -1,16 +1,20 @@
-import { TestBed } from '@angular/core/testing';
+import { Injectable } from '@angular/core';
+import { CanActivate, Router } from '@angular/router';
+import { ApiService } from './api.service';
 
-import { GuardService } from './guard.service';
+@Injectable({
+  providedIn: 'root'
+})
+export class GuardService implements CanActivate {
 
-describe('GuardService', () => {
-  let service: GuardService;
+  constructor(private apiService: ApiService, private router: Router) {}
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(GuardService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+  canActivate(): boolean {
+    if (this.apiService.isAuthenticated()) {
+      return true;
+    } else {
+      this.router.navigate(['/login']);
+      return false;
+    }
+  }
+}
